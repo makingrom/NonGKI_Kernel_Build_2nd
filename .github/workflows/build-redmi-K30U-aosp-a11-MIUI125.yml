@@ -12,8 +12,8 @@ env:
   CUSTOM_CMDS : "CLANG_TRIPLE=aarch64-linux-gnu-"
   EXTRA_CMDS : "LLVM=1 LLVM_IAS=1"
 
-  KERNEL_SOURCE : "https://github.com/makingrom/android_kernel_xiaomi_cezanne_general_gibrary_and_github_action.git"
-  KERNEL_BRANCH : "r"
+  KERNEL_SOURCE : "https://github.com/hank9999/android_kernel_xiaomi_mt6885.git"
+  KERNEL_BRANCH : "susfs"
 
   CLANG_SOURCE : "https://github.com/makingrom/android_kernel_xiaomi_cezanne_general_gibrary_and_github_action.git"
   CLANG_BRANCH : "clang-r437112"
@@ -25,7 +25,7 @@ env:
   GCC_32_BRANCH : ""
 
   DEFCONFIG_SOURCE: ""
-  DEFCONFIG_NAME : "cezanne_user_defconfig"
+  DEFCONFIG_NAME : "vendor/cezanne_user_defconfig"
   DEFCONFIG_ORIGIN_IMAGE: ""
   DEFCONFIG_FROM_BOOT: false
 
