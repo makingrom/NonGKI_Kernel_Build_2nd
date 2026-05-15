@@ -15,8 +15,8 @@ env:
   KERNEL_SOURCE : "https://github.com/makingrom/android_kernel_xiaomi_cezanne_general_gibrary_and_github_action.git"
   KERNEL_BRANCH : "r"
 
-  CLANG_SOURCE : "https://raw.githubusercontent.com/Neutron-Toolchains/antman/main/antman"
-  CLANG_BRANCH : ""
+  CLANG_SOURCE : "https://github.com/makingrom/android_kernel_xiaomi_cezanne_general_gibrary_and_github_action.git"
+  CLANG_BRANCH : "clang-r437112"
 
   GCC_GNU : true
   GCC_64_SOURCE : "https://github.com/makingrom/android_kernel_xiaomi_cezanne_general_gibrary_and_github_action.git"
