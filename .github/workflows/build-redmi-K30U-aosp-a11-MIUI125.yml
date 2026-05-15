@@ -18,9 +18,9 @@ env:
   CLANG_SOURCE : "https://raw.githubusercontent.com/Neutron-Toolchains/antman/main/antman"
   CLANG_BRANCH : ""
 
-  GCC_GNU : false
-  GCC_64_SOURCE : ""
-  GCC_64_BRANCH : ""
+  GCC_GNU : true
+  GCC_64_SOURCE : "https://github.com/makingrom/android_kernel_xiaomi_cezanne_general_gibrary_and_github_action.git"
+  GCC_64_BRANCH : "aarch64-linux-android-4.9"
   GCC_32_SOURCE : ""
   GCC_32_BRANCH : ""
 
@@ -41,7 +41,7 @@ env:
   AK3_SOURCE : "https://github.com/SOVIET-ANDROID/AnyKernel3.git"
   AK3_BRANCH : "master"
 
-  BOOT_SOURCE : ""
+  BOOT_SOURCE : "https://raw.githubusercontent.com/makingrom/LXC-DOCKER-KernelSU_Action/refs/heads/main/boot/boot.img"
 
   NEED_DTBO : false
   NEED_SAFE_DTBO : false
@@ -89,7 +89,7 @@ env:
 
 jobs:
   build-kernel:
-    name: Redmi K20 Pro (Based-AOSP A15) (Soviet-Star-OSS)
+    name: Build Redmi K30 U (Based-AOSP A11)
     runs-on: ubuntu-latest # u can changed to ubuntu 22.04, and need container set ubuntu-latest
     # container: archlinux/archlinux:latest # if u need use arch linux -> archlinux/archlinux:latest or ubuntu 20.04 -> ubuntu:focal
     env:
