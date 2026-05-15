@@ -1,4 +1,4 @@
-name: Redmi K30 U (Based-AOSP A11)
+name: Build Redmi K30 U (Based-AOSP A11)
 
 on:
   workflow_call:
