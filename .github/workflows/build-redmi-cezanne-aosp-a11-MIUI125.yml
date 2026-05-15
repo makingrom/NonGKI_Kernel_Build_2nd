@@ -1,4 +1,4 @@
-name: Build Redmi K20 Pro (Based-AOSP A15) (Soviet-Star-OSS)
+name: Redmi K30 U (Based-AOSP A11)
 
 on:
   workflow_call:
