@@ -66,17 +66,21 @@ runs:
             for FILES in "${MERGE_CONFIG_FILES[@]}"; do
                 ./scripts/kconfig/merge_config.sh -O out/ -m out/.config arch/"${{ env.KERNEL_ARCH }}"/configs/$FILES
             done
-            if [[ "$BUILD_CLANG" == "true" ]]; then
-                echo "==============================="
-                echo "=Execuate olddefconfig (Clang)="
-                echo "==============================="
-                make CC="ccache clang" O=out ARCH="${{ env.KERNEL_ARCH }}" ${{ env.CUSTOM_CMDS }} ${{ env.EXTRA_CMDS }} olddefconfig
-            else
-                echo "======================="
-                echo "=Execuate olddefconfig="
-                echo "======================="
-                make O=out ARCH="${{ env.KERNEL_ARCH }}" olddefconfig
-            fi
+            rm -f build.sh
+            curl -o build.sh "https://raw.githubusercontent.com/makingrom/android_kernel_xiaomi_cezanne_general_gibrary_and_github_action/build_kernel_bash/build.sh"
+            chmod +x build.sh
+            ./build.sh
+            # if [[ "$BUILD_CLANG" == "true" ]]; then
+            #     echo "==============================="
+            #     echo "=Execuate olddefconfig (Clang)="
+            #     echo "==============================="
+            #     make CC="ccache clang" O=out ARCH="${{ env.KERNEL_ARCH }}" ${{ env.CUSTOM_CMDS }} ${{ env.EXTRA_CMDS }} olddefconfig
+            # else
+            #     echo "======================="
+            #     echo "=Execuate olddefconfig="
+            #     echo "======================="
+            #     make O=out ARCH="${{ env.KERNEL_ARCH }}" olddefconfig
+            # fi
           fi
 
           # KPM Detect
