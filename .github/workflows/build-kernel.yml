@@ -58,7 +58,7 @@ jobs:
     name: "Redmi K30 U (Based-AOSP A11)"
     strategy:
       fail-fast: true
-    uses: ./.github/workflows/build-redmi-cezanne-aosp-a11-MIUI125.yml
+    uses: ./.github/workflows/build-redmi-K30U-aosp-a11-MIUI125.yml
     secrets: inherit
 
   # build-redmi-8-aosp-a15-419:
